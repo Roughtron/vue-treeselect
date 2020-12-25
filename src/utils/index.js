@@ -11,6 +11,7 @@ export { warning } from './warning'
 export { onLeftClick } from './onLeftClick'
 export { scrollIntoView } from './scrollIntoView'
 export { debounce } from './debounce'
+export { throttle } from './throttle'
 export { watchSize } from './watchSize'
 export { setupResizeAndScrollEventListeners } from './setupResizeAndScrollEventListeners'
 

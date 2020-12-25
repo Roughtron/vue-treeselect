@@ -87,7 +87,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -130,64 +130,70 @@ module.exports = require("lodash/debounce");
 /* 6 */
 /***/ (function(module, exports) {
 
-module.exports = require("watch-size");
+module.exports = require("lodash/throttle");
 
 /***/ }),
 /* 7 */
 /***/ (function(module, exports) {
 
-module.exports = require("is-promise");
+module.exports = require("watch-size");
 
 /***/ }),
 /* 8 */
 /***/ (function(module, exports) {
 
-module.exports = require("lodash/once");
+module.exports = require("is-promise");
 
 /***/ }),
 /* 9 */
 /***/ (function(module, exports) {
 
-module.exports = require("lodash/identity");
+module.exports = require("lodash/once");
 
 /***/ }),
 /* 10 */
 /***/ (function(module, exports) {
 
-module.exports = require("lodash/constant");
+module.exports = require("lodash/identity");
 
 /***/ }),
 /* 11 */
 /***/ (function(module, exports) {
 
-module.exports = require("@babel/runtime/helpers/typeof");
+module.exports = require("lodash/constant");
 
 /***/ }),
 /* 12 */
 /***/ (function(module, exports) {
 
-module.exports = require("lodash/last");
+module.exports = require("@babel/runtime/helpers/typeof");
 
 /***/ }),
 /* 13 */
 /***/ (function(module, exports) {
 
-module.exports = require("babel-helper-vue-jsx-merge-props");
+module.exports = require("lodash/last");
 
 /***/ }),
 /* 14 */
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = require("babel-helper-vue-jsx-merge-props");
 
 /***/ }),
 /* 15 */
+/***/ (function(module, exports) {
+
+module.exports = require("vue");
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -262,12 +268,17 @@ function scrollIntoView($scrollingEl, $focusedEl) {
 }
 // EXTERNAL MODULE: external "lodash/debounce"
 var debounce_ = __webpack_require__(5);
-var debounce_default = /*#__PURE__*/__webpack_require__.n(debounce_);
 
 // CONCATENATED MODULE: ./src/utils/debounce.js
 
+// EXTERNAL MODULE: external "lodash/throttle"
+var throttle_ = __webpack_require__(6);
+var throttle_default = /*#__PURE__*/__webpack_require__.n(throttle_);
+
+// CONCATENATED MODULE: ./src/utils/throttle.js
+
 // EXTERNAL MODULE: external "watch-size"
-var external_watch_size_ = __webpack_require__(6);
+var external_watch_size_ = __webpack_require__(7);
 var external_watch_size_default = /*#__PURE__*/__webpack_require__.n(external_watch_size_);
 
 // CONCATENATED MODULE: ./src/utils/removeFromArray.js
@@ -392,25 +403,25 @@ function isNaN_isNaN(x) {
   return x !== x;
 }
 // EXTERNAL MODULE: external "is-promise"
-var external_is_promise_ = __webpack_require__(7);
+var external_is_promise_ = __webpack_require__(8);
 var external_is_promise_default = /*#__PURE__*/__webpack_require__.n(external_is_promise_);
 
 // CONCATENATED MODULE: ./src/utils/isPromise.js
 
 // EXTERNAL MODULE: external "lodash/once"
-var once_ = __webpack_require__(8);
+var once_ = __webpack_require__(9);
 var once_default = /*#__PURE__*/__webpack_require__.n(once_);
 
 // CONCATENATED MODULE: ./src/utils/once.js
 
 // EXTERNAL MODULE: external "lodash/identity"
-var identity_ = __webpack_require__(9);
+var identity_ = __webpack_require__(10);
 var identity_default = /*#__PURE__*/__webpack_require__.n(identity_);
 
 // CONCATENATED MODULE: ./src/utils/identity.js
 
 // EXTERNAL MODULE: external "lodash/constant"
-var constant_ = __webpack_require__(10);
+var constant_ = __webpack_require__(11);
 var constant_default = /*#__PURE__*/__webpack_require__.n(constant_);
 
 // CONCATENATED MODULE: ./src/utils/constant.js
@@ -420,7 +431,7 @@ var createMap = function createMap() {
   return Object.create(null);
 };
 // EXTERNAL MODULE: external "@babel/runtime/helpers/typeof"
-var typeof_ = __webpack_require__(11);
+var typeof_ = __webpack_require__(12);
 var typeof_default = /*#__PURE__*/__webpack_require__.n(typeof_);
 
 // CONCATENATED MODULE: ./src/utils/deepExtend.js
@@ -452,7 +463,7 @@ function deepExtend(target, source) {
   return target;
 }
 // EXTERNAL MODULE: external "lodash/last"
-var last_ = __webpack_require__(12);
+var last_ = __webpack_require__(13);
 var last_default = /*#__PURE__*/__webpack_require__.n(last_);
 
 // CONCATENATED MODULE: ./src/utils/last.js
@@ -480,6 +491,7 @@ function quickDiff(arrA, arrB) {
   return false;
 }
 // CONCATENATED MODULE: ./src/utils/index.js
+
 
 
 
@@ -2196,7 +2208,7 @@ if (false) { var api; }
 component.options.__file = "src/components/HiddenFields.vue"
 /* harmony default export */ var HiddenFields = (component.exports);
 // EXTERNAL MODULE: external "babel-helper-vue-jsx-merge-props"
-var external_babel_helper_vue_jsx_merge_props_ = __webpack_require__(13);
+var external_babel_helper_vue_jsx_merge_props_ = __webpack_require__(14);
 var external_babel_helper_vue_jsx_merge_props_default = /*#__PURE__*/__webpack_require__.n(external_babel_helper_vue_jsx_merge_props_);
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Input.vue?vue&type=script&lang=js&
@@ -2233,7 +2245,7 @@ var keysThatRequireMenuBeingOpen = [KEY_CODES.ENTER, KEY_CODES.END, KEY_CODES.HO
     }
   },
   created: function created() {
-    this.debouncedCallback = debounce_default()(this.updateSearchQuery, INPUT_DEBOUNCE_DELAY, {
+    this.debouncedCallback = throttle_default()(this.updateSearchQuery, INPUT_DEBOUNCE_DELAY, {
       leading: true,
       trailing: true
     });
@@ -3644,7 +3656,7 @@ if (false) { var Menu_api; }
 Menu_component.options.__file = "src/components/Menu.vue"
 /* harmony default export */ var Menu = (Menu_component.exports);
 // EXTERNAL MODULE: external "vue"
-var external_vue_ = __webpack_require__(14);
+var external_vue_ = __webpack_require__(15);
 var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/MenuPortal.vue?vue&type=script&lang=js&
@@ -3896,7 +3908,7 @@ if (false) { var Treeselect_api; }
 Treeselect_component.options.__file = "src/components/Treeselect.vue"
 /* harmony default export */ var Treeselect = (Treeselect_component.exports);
 // EXTERNAL MODULE: ./src/style.less
-var style = __webpack_require__(15);
+var style = __webpack_require__(16);
 
 // CONCATENATED MODULE: ./src/index.js
 
